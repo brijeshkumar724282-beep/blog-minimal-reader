@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf7f1;
+  color: #1b1812;
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body,
+.dark {
+  background-color: #161310;
+}
+
+::selection {
+  background: #b3402a;
+  color: #faf7f1;
+}
+
+.serif {
+  font-family: Newsreader, Georgia, 'Times New Roman', serif;
+}
+
+.reader-body p {
+  line-height: 1.85;
+  margin-bottom: 1.4rem;
+  font-size: 1.075rem;
+}
+
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+
+.rule-dots {
+  border-top: 2px dotted #d8cdb8;
+}
+
+.dark .rule-dots {
+  border-top-color: #3a342a;
+}
+
+.toc-link.active {
+  color: #b3402a;
+  border-color: #b3402a;
+}
+
+:focus-visible {
+  outline: 2px solid #b3402a;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
